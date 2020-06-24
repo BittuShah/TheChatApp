@@ -1,4 +1,5 @@
 const jwt = require("jsonwebtoken");
+const config = require("config");
 
 function createJWTToken(UserId, Email, CustomerId, isAdmin, _id) {
   const token = jwt.sign(
@@ -9,7 +10,7 @@ function createJWTToken(UserId, Email, CustomerId, isAdmin, _id) {
       isAdmin: isAdmin,
       _id: _id,
     },
-    process.env.TOKEN_SECRET_DEV
+    config.get("TOKEN_SECRET_DEV")
   );
 
   return token;

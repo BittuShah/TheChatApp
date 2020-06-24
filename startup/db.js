@@ -1,14 +1,16 @@
 const mongoose = require("mongoose");
 
+const config = require("config");
+
 // const uri = process.env.dbString;
 
 function masterDB() {
   let dbString;
 
   if (process.env.NODE_ENV == "development") {
-    dbString = process.env.DB_CONNECT_DEV;
+    dbString = config.get("DB_CONNECT_DEV");
   } else {
-    dbString = process.env.DB_CONNECT_PROD;
+    dbString = config.get("DB_CONNECT_PROD");
   }
 
   const Connection = mongoose.createConnection(dbString, {
@@ -47,12 +49,12 @@ function personalDB(key) {
   let dbString;
 
   if (process.env.NODE_ENV == "development") {
-    dbString = process.env.PERSONAL_DB_CONNECT_DEV + key;
+    dbString = config.get("PERSONAL_DB_CONNECT_DEV") + key;
   } else {
     dbString =
-      process.env.PERSONAL_DB_CONNECT_PROD_FIRST +
+      config.get("PERSONAL_DB_CONNECT_PROD_FIRST") +
       key +
-      process.env.PERSONAL_DB_CONNECT_PROD_SECOND;
+      config.get("PERSONAL_DB_CONNECT_PROD_SECOND");
   }
 
   const Connection = mongoose.createConnection(dbString, {

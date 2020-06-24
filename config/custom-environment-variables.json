@@ -1,0 +1,8 @@
+{
+  "TOKEN_SECRET_DEV": "ChatApp_TokenSecret",
+  "DB_CONNECT_DEV": "ChatApp_MasterDBStringDev",
+  "DB_CONNECT_PROD": "ChatApp_MasterDBStringProd",
+  "PERSONAL_DB_CONNECT_DEV": "ChatApp_PersonalDBStringDev",
+  "PERSONAL_DB_CONNECT_PROD_FIRST": "ChatApp_PersonalDBStringFirst",
+  "PERSONAL_DB_CONNECT_PROD_SECOND": "ChatApp_PersonalDBStringSecond"
+}
