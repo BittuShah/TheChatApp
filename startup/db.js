@@ -55,6 +55,8 @@ function personalDB(key) {
       config.get("PERSONAL_DB_CONNECT_PROD_FIRST") +
       key +
       config.get("PERSONAL_DB_CONNECT_PROD_SECOND");
+
+    console.log("DBString: ", dbString);
   }
 
   const Connection = mongoose.createConnection(dbString, {
