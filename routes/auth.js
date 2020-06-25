@@ -56,15 +56,10 @@ router.post("/register", async (req, res) => {
         true
       );
 
-      console.log("Before: ", savedOrgUser.CustomerId);
-      
-
       const savedUser = await CreatePersonalUser(
         savedOrgUser.CustomerId,
         savedOrgUser._id
       );
-
-      console.log("After: ", savedOrgUser.CustomerId);
 
       try {
         await CreateDefaultGroups(savedOrgUser.CustomerId, savedUser._id);

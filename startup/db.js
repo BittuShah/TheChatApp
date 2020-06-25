@@ -9,9 +9,7 @@ function masterDB() {
 
   if (process.env.NODE_ENV == "development") {
     dbString = config.get("DB_CONNECT_DEV");
-  } else {
-    console.log("MasterDB: ", process.env.NODE_ENV);
-    
+  } else {    
     dbString = config.get("DB_CONNECT_PROD");
   }
 
@@ -53,9 +51,6 @@ function personalDB(key) {
   if (process.env.NODE_ENV == "development") {
     dbString = config.get("PERSONAL_DB_CONNECT_DEV") + key;
   } else {
-
-    console.log("PersonalDB: ", process.env.NODE_ENV);
-
     dbString =
       config.get("PERSONAL_DB_CONNECT_PROD_FIRST") +
       key +
