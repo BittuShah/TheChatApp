@@ -118,11 +118,15 @@ router.get("/ug", AuthUser, async (req, res) => {
 
       // console.log(tempGrp._id);
 
-      const tryArr = [tempGrp._id];
+      const tryArr = [1, tempGrp._id];
+
+      // tryArr.push(tempGrp._id);
+
+      console.log("TryArr: ", tryArr);
 
       const collectionName = await FindCollections(req.user.CustomerId, tryArr);
 
-      console.log(collectionName);
+      console.log("Col:", await collectionName);
 
       const messages = await FindGroupChatSorted(
         req.user.CustomerId,

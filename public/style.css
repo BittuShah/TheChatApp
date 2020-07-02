@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: inline-flex !important;
+}
+
+.ListNames {
+  width: 20%;
+}
+
+/* .MessagesBlock {
+   width: 50%; 
+} */
+
+.MessageForm {
+  width: 95%;
+}
+
+.InputContainer {
+  display: inline-flex;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.MessageInput {
+  display: inline;
+}
+
+hr {
+  height: 4px !important;
+  width: 85%;
+  margin-left: 15px;
+  /* margin-bottom: -3px; */
+  /* color: black; */
+}
+
+.hr-primary {
+  background-image: -webkit-linear-gradient(
+    left,
+    rgba(66, 133, 244, 0.8),
+    rgba(66, 133, 244, 0.6),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.MsgContainer {
+  /* border: 1px solid red; */
+  height: 525px;
+  max-height: 525px;
+  min-width: 290px;
+  max-width: 300px;
+  /* overflow-y: scroll; */
+}
+
+.messages {
+  /* border: 1px solid black; */
+  height: 450px;
+  max-height: 500px;
+  overflow-y: scroll;
+}
+
+.title {
+  text-align: center;
+  border: 1px solid black;
+  /* width: 400px; */
+  min-width: 170px;
+  margin: 7px;
+  background-color: #7cb083;
+  padding: 5px;
+}
+
+.dot {
+  height: 20px;
+  width: 20px;
+  background-color: green;
+  border-radius: 50%;
+  display: inline-flex;
+  margin-left: 1em;
+  font-size: 0.8em;
+  padding-left: 0.4em;
+  color: white;
+  text-align: center;
+}
+
+.nameContainer {
+  display: inline-flex;
+}
+
+.addUserBtn {
+  display: none !important;
+}
+
+.addedUserBtn {
+  display: none !important;
+}
+
+.toast-container {
+  width: 80%;
+  /* border: 1px solid violet; */
+  margin-top: 7px;
+  /* margin-left: auto;
+  margin-right: 5px; */
+  /* align-self: center !important; */
+  /* align-self: flex-end !important; */
+  /* text-align: end; */
+  border-radius: 7px;
+}
+
+.toast-header {
+  background-color: #9da286 !important;
+  color: black !important;
+}
+
+.toast-body {
+  background-color: #cdd5d5;
+}
+
+.addUser {
+  display: none;
+  margin-left: 50px;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.addedUser {
+  display: none;
+  margin-left: 50px;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+/* .list-group {
+  cursor: pointer;
+} */
+
+.hoverName {
+  cursor: pointer;
+  display: inline-flex;
+}
+
+.msgStyle {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: default;
+}

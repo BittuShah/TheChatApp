@@ -142,6 +142,8 @@ async function findCollections(dbId, tryArr) {
     (await PersonalConn).db.listCollections().toArray(function (err, names) {
       if (!err) {
         for (let i = 0; i < names.length; i++) {
+          // console.log("Names: ", names[i].name);
+
           collNames.push(names[i].name);
         }
         resolve();
@@ -151,10 +153,18 @@ async function findCollections(dbId, tryArr) {
     });
   }).then(async () => {
     return new Promise((resolve, reject) => {
+      console.log("TryArray: ", tryArr[0]);
+
       for (let i = 0; i < tryArr.length; i++) {
         const isCollection = collNames.indexOf(tryArr[i]);
 
+        // console.log("colNames: ", collNames);
+
+        console.log("Is Collection: ", isCollection);
+
         if (isCollection != -1) {
+          // console.log("Collection found: ", tryArr[i]);
+
           theCollection = tryArr[i];
         } else {
           continue;

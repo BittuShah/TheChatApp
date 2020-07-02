@@ -89,6 +89,8 @@ router.post("/register", async (req, res) => {
 });
 
 router.post("/login", async (req, res) => {
+  console.log(req.body);
+
   // Check if the req.bosy is empty or not
   if (Object.keys(req.body).length == 0)
     return res.status(401).send({ ErrMsg: "Please Fill all the details!" });

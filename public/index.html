@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container-fluid inline-flex p-2">
+      <div class="row border border-primary m-auto ListNames">
+        <div id="GroupsList" class="col-12 mb-2 mt-2">
+          <ul class="list-group" id="ListGroups">
+            <!-- <li class="list-group-item">List Of Groups</li> -->
+          </ul>
+        </div>
+        <hr class="hr-primary" />
+        <div id="UsersList" class="col-12 mb-2">
+          <ul class="list-group" id="ListUsers">
+            <!-- <li class="list-group-item">
+              <p>Name of the User</p>
+              <p>Last Message!</p>
+            </li>
+
+            <li class="list-group-item">
+              <p class="border border-primary">Name of the User</p>
+              <p class="border border-primary">Last Message!</p>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+
+      <div class="row border border-primary ml-5 MessagesBlock">
+        <div class="col-12 mb-2 MsgContainer">
+          <div class="title">
+            <div class="nameContainer">
+              <h4 class="mr-3">
+                Hello World!
+              </h4>
+              <span class="addUserBtn btn btn-primary addSelect">Add User</span>
+              <span class="addedUserBtn ml-3 btn btn-primary addedSelect"
+                >Group Users</span
+              >
+            </div>
+            <!-- <h6>Last seen today at 10:20 PM</h6> -->
+          </div>
+          <div class="messages"></div>
+
+          <!-- <div class="toast-container">
+            <div class="toast-header">
+              <strong class="mr-auto">Bootstrap</strong>
+              <small>11 mins ago</small>
+            </div>
+            <div class="toast-body">
+              Hello, world! This is a toast message.
+            </div>
+          </div>
+          <div class="toast-container">
+            <div class="toast-header">
+              <strong class="mr-auto">Bootstrap</strong>
+              <small>11 mins ago</small>
+            </div>
+            <div class="toast-body">
+              Hello, world! This is a toast message.
+            </div>
+          </div> -->
+        </div>
+
+        <!-- <div
+          class="toast col-12"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+        >
+          <div class="toast-header">
+            <strong class="mr-auto">Bootstrap</strong>
+            <small>11 mins ago</small>
+          </div>
+          <div class="toast-body">
+            Hello, world! This is a toast message.
+          </div>
+        </div> -->
+        <form class="MessageForm m-auto" id="MsgForm">
+          <div class="form-group InputContainer">
+            <input
+              type="text"
+              class="form-control MessageInput d-inline"
+              id="msg"
+              aria-describedby="textHelp"
+              placeholder="Type a message"
+              autofocus
+            />
+            <button type="submit" class="btn btn-primary inline-flex">
+              Send
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="addUser">
+        <ul class="list-group" id="addUserList">
+          <!-- <li class="list-group-item">List Of Users</li> -->
+        </ul>
+      </div>
+
+      <div class="addedUser">
+        <ul class="list-group" id="addedUserList">
+          <li class="list-group-item">
+            List Of Users <span class="btn btn-warning">Active</span>
+            <span class="btn btn-danger" aria-disabled="true">Disabled</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- JS, Popper.js, and jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
